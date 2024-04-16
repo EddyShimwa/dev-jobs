@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "company": "Tech Innovate",
+    "logo": "./src/assets/logos/js-icon.png",
+    "position": "Lead Machine Learning Engineer",
+    "postedAt": "2h ago",
+    "contract": "Full Time",
+    "location": "Canada",
+    "website": "https://example.com/techinnovate",
+    "apply": "https://example.com/techinnovate/apply",
+    "description": "Tech Innovate is seeking a Lead Machine Learning Engineer to spearhead our efforts in developing cutting-edge machine learning algorithms. You will be responsible for leading a team of data scientists and engineers to create innovative solutions that drive business growth.",
+    "requirements": {
+      "content": "We are looking for an individual with a strong background in machine learning and a proven track record of delivering impactful projects. The ideal candidate should be proficient in Python, TensorFlow, and have experience working with large datasets.",
+      "items": [
+        "Minimum of 7 years of experience in machine learning",
+        "Expertise in Python and TensorFlow",
+        "Experience with large-scale data processing and analysis",
+        "Strong problem-solving skills and ability to work in a fast-paced environment"
+      ]
+    },
+    "role": {
+      "content": "As the Lead Machine Learning Engineer, you will have the opportunity to shape the direction of our machine learning initiatives and work closely with cross-functional teams to deliver high-quality solutions. This role offers the chance to innovate in a dynamic and collaborative environment.",
+      "items": [
+        "Lead the development of machine learning models and algorithms",
+        "Collaborate with product and engineering teams to integrate machine learning into our products",
+        "Mentor junior team members and provide technical guidance",
+        "Stay updated on the latest advancements in machine learning and contribute to our research efforts"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "company": "Data Insights",
+    "logo": "./src/assets/logos/js-icon.png",
+    "position": "Data Analyst",
+    "postedAt": "1d ago",
+    "contract": "Contract",
+    "location": "Germany",
+    "website": "https://example.com/datainsights",
+    "apply": "https://example.com/datainsights/apply",
+    "description": "Data Insights is looking for a Data Analyst to join our team on a contract basis. You will be responsible for analyzing large datasets, generating insights, and presenting findings to key stakeholders.",
+    "requirements": {
+      "content": "We are seeking a detail-oriented individual with strong analytical skills and a passion for data-driven decision making. The ideal candidate should have experience with SQL, data visualization tools, and statistical analysis.",
+      "items": [
+        "Bachelor's degree in Computer Science, Statistics, or related field",
+        "Proficiency in SQL and data visualization tools such as Tableau or Power BI",
+        "Strong analytical and problem-solving skills",
+        "Ability to communicate complex findings to non-technical stakeholders"
+      ]
+    },
+    "role": {
+      "content": "As a Data Analyst at Data Insights, you will play a key role in helping our clients leverage their data to make informed business decisions. This is an exciting opportunity to work with cutting-edge technologies and collaborate with a diverse team of professionals.",
+      "items": [
+        "Analyze large datasets to identify trends and patterns",
+        "Develop dashboards and reports to visualize key metrics",
+        "Communicate findings and recommendations to stakeholders",
+        "Collaborate with cross-functional teams to drive data-driven initiatives"
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "company": "Tech Solutions",
+    "logo": "./src/assets/logos/js-icon.png",
+    "position": "Cloud Solutions Architect",
+    "postedAt": "3d ago",
+    "contract": "Full Time",
+    "location": "United States",
+    "website": "https://example.com/techsolutions",
+    "apply": "https://example.com/techsolutions/apply",
+    "description": "Tech Solutions is seeking a Cloud Solutions Architect to design and implement scalable cloud solutions for our clients. You will work closely with stakeholders to understand business requirements and develop architecture designs that meet their needs.",
+    "requirements": {
+      "content": "We are looking for an experienced architect with a strong background in cloud computing and a track record of successful implementations. The ideal candidate should have expertise in AWS, Azure, or Google Cloud Platform.",
+      "items": [
+        "Minimum of 5 years of experience in cloud architecture",
+        "Proficiency in AWS, Azure, or Google Cloud Platform",
+        "Strong understanding of networking and security principles",
+        "Excellent communication and stakeholder management skills"
+      ]
+    },
+    "role": {
+      "content": "As a Cloud Solutions Architect at Tech Solutions, you will be responsible for designing and implementing cloud solutions that align with our clients' business objectives. This role offers the opportunity to work with cutting-edge technologies and make a significant impact on our clients' success.",
+      "items": [
+        "Collaborate with stakeholders to gather requirements and define architecture designs",
+        "Design scalable and secure cloud solutions",
+        "Lead the implementation and deployment of cloud architectures",
+        "Provide technical guidance and support to project teams"
+      ]
+    }
+  }
+]

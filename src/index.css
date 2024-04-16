@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .heading-1 {
+    @apply text-[28px] text-dark-blue font-bold leading-normal dark:text-white;
+  }
+  .heading-2 {
+    @apply text-2xl text-dark-blue font-bold leading-normal dark:text-white;
+  }
+  .heading-3 {
+    @apply text-xl text-dark-blue font-bold leading-normal dark:text-white;
+  }
+  .heading-4 {
+    @apply text-sm text-dark-blue font-bold leading-normal dark:text-white;
+  }
+  .custom-text {
+    @apply text-base font-normal leading-[26px] text-dark-blue dark:text-dark-gray;
+  }
+}
