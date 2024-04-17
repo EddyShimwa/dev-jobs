@@ -43,8 +43,8 @@ function Main() {
           {/* Card */}
           {(searchTitle 
           
-          || isFullTime
-          || location
+          // || isFullTime
+          // || location
             ? filteredData
             : paginationData
           ).map((card) => (

@@ -11,7 +11,7 @@ const routes = createBrowserRouter([
     },
     {
         path : "/:id",
-        element : <DetailPage />
+        // element : <DetailPage />
     }
 ])
 
