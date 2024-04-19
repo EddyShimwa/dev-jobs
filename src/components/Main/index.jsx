@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import data from "../../../data.json";
 import Button from "../Button";
 import { useData } from "../../context/DataContext";
@@ -15,7 +15,20 @@ function Main() {
     setLocation,
     setIsFullTime
   } = useData();
+
+
+
+
   const [pagination, setPagination] = useState(12);
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch('https://dev-jobs-backend.onrender.com/api/jobs')
+      .then(response => response.json())
+      .then(data => setData(data));
+  }, []);
+
+  console.log(data);
 
   const ref = useClickAway(() => {
     setDetailedSearch(false);
@@ -60,7 +73,7 @@ function Main() {
                 <img src={card.logo} alt={`${card.company} logo`} />
               </div>
               <div className="mt-2 flex items-center gap-3">
-                <p className="custom-text text-dark-gray">{card.postedAt}</p>
+              <p className="custom-text text-dark-gray">{new Date(card.postedAt).toISOString().split('T')[0]}</p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="4"
