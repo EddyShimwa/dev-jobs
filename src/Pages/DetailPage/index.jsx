@@ -1,25 +1,41 @@
-import React from "react";
+
+import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useData } from "../../context/DataContext";
 import data from "../../../data.json";
 import Button from "../../components/Button";
+
 function DetailPage() {
   const { isDarkMode, setIsDarkMode } = useData();
+  const [apiData, setApiData] = useState([]);
+  const [companyItem, setCompanyItem] = useState(null);
+
   let { id } = useParams();
 
-  const company = data.filter((item) => {
-    return item.id === +id;
-  });
+  useEffect(() => {
+    fetch("https://dev-jobs-backend.onrender.com/api/jobs/")
+      .then((response) => response.json())
+      .then((data) => {
+        setApiData(data);
+      })
+      .catch((error) => console.error("Error fetching data: ", error));
+  }, []);
 
-  let companyItem;
+  useEffect(() => {
+    const company = apiData.filter((item) => item.id === +id);
+    if (company.length > 0) {
+      setCompanyItem(company[0]);
+    } else {
+      console.error("Company not found");
+    }
+  }, [apiData, id]);
 
-  if (company.length > 0) {
-    companyItem = company[0];
-  } else {
-    throw new Error("There is no match company");
+  if (!companyItem) {
+    return <div>Loading...</div>;
   }
+
   return (
-    <div className={`${isDarkMode ? "dark" : ""} flex flex-col  `}>
+    <div className={`${isDarkMode ? "dark" : ""} flex flex-col`}>
       <header className=" bg-light-grey dark:bg-midnight  ">
         <div className="w-full h-[136px]  bg-image-mobile md:rounded-bl-[100px]    ">
           <div className="md:mx-auto md:container">
@@ -108,6 +124,7 @@ function DetailPage() {
           </div>
         </div>
       </header>
+    
 
       <main className="bg-light-grey dark:bg-midnight min-h-screen px-6 py-[214px]">
         <div className="w-full max-w-[730px] md:mx-auto bg-white dark:bg-dark-blue  ">
@@ -190,25 +207,10 @@ function DetailPage() {
         </div>
       </main>
 
-      <div className="w-full h-[96px] bg-white dark:bg-dark-blue">
-        <div className="w-full md:max-w-[730px] md:mx-auto h-full px-6 flex items-center justify-center md:justify-between">
-          <div className="hidden md:flex md:flex-col md:gap-3">
-            <h3 className="heading-2">{companyItem.position}</h3>
-            <p className="custom-text">{companyItem.company}</p>
-          </div>
 
-          <Button variant="primary" customStyle="w-full md:w-[141px]">
-            <a
-              className="w-full h-full grid place-items-center"
-              href={companyItem.apply}
-            >
-              Apply Now
-            </a>
-          </Button>
-        </div>
-      </div>
     </div>
   );
 }
 
 export default DetailPage;
+
